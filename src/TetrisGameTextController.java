@@ -39,7 +39,7 @@ public class TetrisGameTextController {
 		System.out.print(LINE_BREAK + view.getBoardString() + LINE_BREAK);
 		
 		//Prompt user for next move
-		System.out.println("Please enter a move (l,r,d,z,x) or type 'Quit' to end.");
+		System.out.println("Please enter a move (l,r,d,z,x) or type 'Quit' to end, or 'Reset' to play a new game.");
 	}
 
 	/**
@@ -102,6 +102,9 @@ public class TetrisGameTextController {
 							+ "By pressing the 'z' and 'x' key, you can rotate the Tetrimino 90 degrees clockwise or counter-clockwise. "
 							+ "The Tetrimino will lock down as soon as it lands on the skirt of the gameboard. "
 							+ "At that point, the next Tetrimino will begin to fall.");
+				}
+				else if (line.toLowerCase().equals("reset")) {
+					resetGame();
 				}
 				// Otherwise, check to make sure their input is valid
 				else {
